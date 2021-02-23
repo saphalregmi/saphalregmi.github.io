@@ -1,0 +1,336 @@
+:root{
+	--primary-color: #c72727;
+	--secondary-color: #f99500;
+	--max-width: 1100px;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+	background: #f1f1f1;
+	margin: 5px;
+	padding: 5px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#main-nav{
+	background: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+#main-nav .container{
+	display: grid;
+	grid-template-columns: 6fr 3fr 2fr;
+	padding: 1rem;
+	align-items: center;
+}
+
+/*@media (max-width: 768px) {
+  #main-nav .container {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+  }
+}*/
+
+
+.container{
+	max-width: var(--max-width);
+	margin: auto;
+	overflow: hidden;
+}
+
+
+#main-nav .logo{
+	width: 160px;
+}
+
+/*@media(max-width: 768px){
+#main-nav ul, #main-nav .logo {
+    justify-self: center;
+}
+}*/
+
+#main-nav .social-media{
+	justify-content: center;
+}
+
+/*@media (max-width: 768px){
+#main-nav .social-media {
+    display: none;
+}
+}*/
+
+a {
+	color: var(--dark-color);
+	text-decoration: none;
+
+}
+
+#main-nav .social-media i{
+	color: #777;
+	margin-right: 0.5rem;
+}
+
+.fa-2x{
+	font-size: 2em;
+}
+
+.fab:hover{
+	opacity: 0.7;
+}
+
+/*.fa-facebook:before {
+    content: "\f09a";
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+.fa-youtube:before {
+    content: "\f167";
+}*/
+
+
+#main-nav ul{
+	justify-content: flex-end;
+	display: flex;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	display: list-item;
+}
+
+#main-nav ul li a{
+	padding: 0.75rem;
+	font-weight: bold;
+}
+
+#showcase{
+	color: #fff;
+	background: #333;
+	padding: 2rem;
+	position: relative;
+}
+
+#showcase:before{
+	content: '';
+	background: url(../img/naomaiOsaka.jpeg) no-repeat center center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.container{
+	max-width: var(--max-width);
+	margin: auto;
+	padding: 0 2rem;
+	overflow: hidden;
+
+}
+
+
+
+
+#showcase .showcase-container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}
+
+/*media="screen and (max-width: 768px)"
+@media (max-width: 600px)
+#showcase .showcase-container, #home-articles .articles-container, #main-footer .footer-container {
+    grid-template-columns: 1fr;
+}*/
+
+
+/*media="screen and (max-width: 768px)"
+#main-articles .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+}*/
+
+
+/*media="screen and (max-width: 768px)"
+@media (max-width: 600px)
+#showcase .showcase-container, #main-articles .articles-container, #main-footer .footer-container {
+    grid-template-columns: 1fr;
+}*/
+
+
+/*media="screen and (max-width: 768px)"
+@media (max-width: 600px)
+#main-footer .footer-container > *:first-child, 
+#main-footer .footer-container > *:nth-child(2) {
+    border-bottom: #444 dotted 1px;
+    padding-bottom: 1rem;
+}*/
+
+/*media="screen and (max-width: 768px)"
+@media (max-width: 600px)
+#main-footer .footer-container > *:last-child {
+    grid-column: 1;
+}*/
+
+
+#showcase .showcase-content{
+	z-index: 1;
+}
+
+.category-sports{
+	background: #f99500;
+}
+
+.category{
+	display: inline-block;
+	color: #fff;
+	font-size: 0.55rem;
+	text-transform: uppercase;
+	padding: 0.4rem 0.6rem;
+	border-radius: 15px;
+	margin-bottom: 0.5rem;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-bottom: 0.75rem;
+	line-height: 1.3;
+	font-family: 'Staatliches', cursive;
+	text-transform: uppercase;
+}
+
+#showcase .showcase-content p{
+	margin-bottom: 1rem;
+}
+
+p{
+	margin: 0.5rem 0;
+}
+
+.btn-primary{
+	background: #c72727;
+}
+
+.btn-secondary{
+	background: #f99500;
+}
+
+.btn{
+	display: inline-block;
+	border: none;
+	color: #fff;
+	padding: 0.5rem 1.5rem;
+}
+
+.btn:hover{
+	opacity: 0.9;
+}
+
+.py-2{
+	padding: 2rem 0;
+}
+
+img{
+	width: 100%;
+}
+
+#main-articles .articles-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.card{
+	padding: 1rem;
+	background: #fff;
+}
+
+#main-articles .articles-container > *:first-child, 
+#main-articles .articles-container > *:last-child 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-column: span 2;
+    align-items: center;
+}
+
+.category-ent{
+	background: #a66bbe;
+}
+
+.bg-dark{
+	background: #333
+	color: #fff;
+}
+
+.category-tech{
+	background: #009cff;
+}
+
+.bg-primary{
+	background: #c72727;
+	color: #fff;
+}
+
+#main-footer .footer-container{
+	display: grid;
+	grid-template-columns: repeat(4 1fr);
+	grid-gap: 1rem;
+}
+
+#main-footer {
+	background: #333;
+	color: #fff;
+	
+}
+
+#main-footer .footer-container input[type='email']{
+	width: 90%;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit']{
+	width: 90%;
+}
+
+.list ul{
+	list-style: none;
+}
+
+#main-footer a{
+	color: #fff;
+}
+
+#main-footer .footer-container > *:last-child{
+	background: #444;
+	grid-column-start: 1;
+	grid-column-end: span 4;
+	padding: 0.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+
+
