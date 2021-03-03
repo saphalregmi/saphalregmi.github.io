@@ -36,12 +36,6 @@ img{
 	align-items: center;
 }
 
-.container{
-	max-width: var(--max-width);
-	margin: auto;
-	overflow: hidden;
-}
-
 
 #main-nav .logo{
 	width: 160px;
@@ -116,6 +110,21 @@ li{
 
 }
 
+.page-container{
+	display: grid;
+	grid-template-columns: 5fr 2fr;
+	margin: 2rem 0;
+	grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child{
+	grid-row: 1 / span 3;
+}
+
+.l-heading{
+	font-size: 2rem;
+}
+
 #showcase .showcase-container{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -173,6 +182,13 @@ p{
 	padding: 0.5rem 1.5rem;
 }
 
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #333;
+}
+
 .btn:hover{
 	opacity: 0.9;
 }
@@ -192,6 +208,7 @@ p{
 	padding: 1rem;
 	background: #fff;
 }
+
 
 #main-articles .articles-container > *:first-child, 
 #main-articles .articles-container > *:last-child 
